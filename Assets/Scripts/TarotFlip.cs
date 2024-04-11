@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class TarotFlip : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public GameObject card;
+
+    Vector3 accelerationDir;
+
     void Update()
     {
-        
+        accelerationDir = Input.acceleration;
+
+        if(accelerationDir.sqrMagnitude > 5f ) 
+        {
+            card.SetActive( false );
+        }
     }
 }
