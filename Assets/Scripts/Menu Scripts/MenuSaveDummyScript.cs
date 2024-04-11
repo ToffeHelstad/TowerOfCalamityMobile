@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class MenuSaveDummyScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool GameSaved;
+    public GameObject continueButton;
+
+    private void Update()
     {
-        
+        if (GameSaved)
+        {
+            continueButton.SetActive(true);
+        }
+        else
+        {
+            continueButton.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

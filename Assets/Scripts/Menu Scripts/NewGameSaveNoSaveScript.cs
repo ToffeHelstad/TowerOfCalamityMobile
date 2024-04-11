@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class NewGameSaveNoSaveScript : MonoBehaviour
 {
-    public bool SaveStarted;
+    public MenuSaveDummyScript SaveScript;
     public GameObject NewSaveMenu;
     public GameObject SavePresentPopup;
 
+
     public void NewSaveLogic()
     {
-        if (SaveStarted)
+        if (SaveScript.GameSaved)
         {
             SavePresentPopup.SetActive(true);
         }

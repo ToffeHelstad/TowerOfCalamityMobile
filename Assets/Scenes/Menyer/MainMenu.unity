@@ -1920,7 +1920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b145f8597a5801c49be51a3c461aae49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveStarted: 0
+  SaveScript: {fileID: 1281804022}
   NewSaveMenu: {fileID: 1520043372}
   SavePresentPopup: {fileID: 2054370332}
 --- !u!1 &759738676
@@ -2791,6 +2791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1281804021}
+  - component: {fileID: 1281804022}
   m_Layer: 0
   m_Name: SaveManager
   m_TagString: Untagged
@@ -2813,6 +2814,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1281804022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281804020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9beb1035ebe874186e51d4023327ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSaved: 0
+  continueButton: {fileID: 0}
 --- !u!1 &1368982089
 GameObject:
   m_ObjectHideFlags: 0
