@@ -8,8 +8,9 @@ public class LoadsaMoney : MonoBehaviour
 {
     public TextMeshProUGUI softWallet;
     public TextMeshProUGUI hardWallet;
-    [SerializeField] private int softGains;
+    [SerializeField] public int softGains;
     [SerializeField] private int hardGains;
+
     public int hellaSoft; //mengden soft currency spilleren har, lagret i player preferences
     public int hellaHard; //ditto, men hard currency
     void Start()
