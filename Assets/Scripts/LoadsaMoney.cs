@@ -10,6 +10,7 @@ public class LoadsaMoney : MonoBehaviour
     public TMP_Text hardWallet;
     [SerializeField] private int softGains;
     [SerializeField] private int hardGains;
+
     public int hellaSoft; //mengden soft currency spilleren har, lagret i player preferences
     public int hellaHard; //ditto, men hard currency
     void Start()
@@ -32,9 +33,9 @@ public class LoadsaMoney : MonoBehaviour
     void CalamityCoins()
     {
         softWallet.text = "" + hellaSoft;
-        if (Input.GetKeyDown(KeyCode.Space)) //må erstattes med logikken som gir currency fra in-game saker
+        if (Input.GetKeyDown(KeyCode.Space)) //mï¿½ erstattes med logikken som gir currency fra in-game saker
         {
-            hellaSoft += softGains; //legger til 1 basert på hva som skjer i if statement
+            hellaSoft += softGains; //legger til 1 basert pï¿½ hva som skjer i if statement
             PlayerPrefs.SetInt("amount", hellaSoft); //lagrer mengden i hellaCash som int i PlayerPrefs
         }  
     }
@@ -42,9 +43,9 @@ public class LoadsaMoney : MonoBehaviour
     void TowerTalents()
     {
         hardWallet.text = "" + hellaHard;
-        if (Input.GetKeyDown(KeyCode.Backspace)) //må erstattes med logikken som gir currency fra in-game saker
+        if (Input.GetKeyDown(KeyCode.Backspace)) //mï¿½ erstattes med logikken som gir currency fra in-game saker
         {
-            hellaHard += hardGains; //legger til 1 basert på hva som skjer i if statement
+            hellaHard += hardGains; //legger til 1 basert pï¿½ hva som skjer i if statement
             PlayerPrefs.SetInt("amount", hellaHard); //lagrer mengden i hellaCash som int i PlayerPrefs
         }
     }

@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+
+
         //movement = moveInput.action.ReadValue<Vector2>();
     }
 
