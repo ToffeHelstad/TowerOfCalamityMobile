@@ -1,34 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using TMPro;
-//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LoadsaMoney : MonoBehaviour
 {
-    public int hellaCash;
-    //public TextMeshPro wallet;
-    public TextMeshProUGUI wallet;
- 
+    public TextMeshProUGUI softWallet;
+    public TextMeshProUGUI hardWallet;
+    [SerializeField] private int softGains;
+    [SerializeField] private int hardGains;
+    public int hellaSoft; //mengden soft currency spilleren har, lagret i player preferences
+    public int hellaHard; //ditto, men hard currency
     void Start()
     {
-        hellaCash = PlayerPrefs.GetInt("amount"); //henter spillerens dosh fra int lagret i PlayerPrefs
+        hellaSoft = PlayerPrefs.GetInt("amount"); //henter spillerens myke dosh fra int lagret i PlayerPrefs
+        hellaHard = PlayerPrefs.GetInt("amount"); //henter spillerens harde dosh fra int lagret i PlayerPrefs
     }
 
     void Update()
     {
-        wallet.text = "" + hellaCash;
-        if (Input.GetKeyDown(KeyCode.Space)) //må erstattes med logikken som gir currency fra in-game saker
-        {
-            hellaCash += 1; //legger til 1 basert på hva som skjer i if statement
-            PlayerPrefs.SetInt("amount", hellaCash); //lagrer mengden i hellaCash som int i PlayerPrefs
-        }
-        
-        if(Input.GetKeyDown(KeyCode.R))
+        CalamityCoins();
+        TowerTalents();
+
+        if (Input.GetKeyDown(KeyCode.R))
         {
             PlayerPrefs.DeleteAll();
         }
     }
+
+    void CalamityCoins()
+    {
+        softWallet.text = "" + hellaSoft;
+        if (Input.GetKeyDown(KeyCode.Space)) //må erstattes med logikken som gir currency fra in-game saker
+        {
+            hellaSoft += softGains; //legger til 1 basert på hva som skjer i if statement
+            PlayerPrefs.SetInt("amount", hellaSoft); //lagrer mengden i hellaCash som int i PlayerPrefs
+        }  
+    }
+
+    void TowerTalents()
+    {
+        hardWallet.text = "" + hellaHard;
+        if (Input.GetKeyDown(KeyCode.Backspace)) //må erstattes med logikken som gir currency fra in-game saker
+        {
+            hellaHard += hardGains; //legger til 1 basert på hva som skjer i if statement
+            PlayerPrefs.SetInt("amount", hellaHard); //lagrer mengden i hellaCash som int i PlayerPrefs
+        }
+    }
+
+
 }
+
