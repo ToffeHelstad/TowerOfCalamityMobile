@@ -10,7 +10,7 @@ public class SO_Purchaseable : ScriptableObject
     public Sprite sprite;
     public string itemName;
     public string itemDescription;
-    public float price;
+    public int price;
 
     [Header("What kind of currency does it take?")]
     public bool SoftCurrency;
