@@ -21,3 +21,4 @@ MonoBehaviour:
   Money: 1
   Object: 0
   Currency: 1
+  HardCurrencyAmount: 500
