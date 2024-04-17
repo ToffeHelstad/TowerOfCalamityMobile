@@ -3254,10 +3254,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneIndexManager, Assembly-CSharp
-        m_MethodName: ChangeToGameScene
-        m_Mode: 1
+      - m_Target: {fileID: 1520043372}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2054370332}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3596,7 +3608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b145f8597a5801c49be51a3c461aae49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveScript: {fileID: 0}
+  SaveScript: {fileID: 1793079954}
   NewSaveMenu: {fileID: 1520043372}
   SavePresentPopup: {fileID: 2054370332}
 --- !u!1 &749565574
@@ -8365,6 +8377,52 @@ RectTransform:
   m_AnchoredPosition: {x: -194, y: 0}
   m_SizeDelta: {x: 985, y: 727.7}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1793079953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1793079956}
+  - component: {fileID: 1793079954}
+  m_Layer: 0
+  m_Name: Tullegutt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1793079954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793079953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9beb1035ebe874186e51d4023327ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSaved: 0
+  continueButton: {fileID: 127714933}
+--- !u!4 &1793079956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793079953}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1253.4807, y: 870.4447, z: -873.7036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1795155142
 GameObject:
   m_ObjectHideFlags: 0
@@ -10251,6 +10309,10 @@ PrefabInstance:
     - target: {fileID: 8427254134360094057, guid: 00afbd4a53d7afb47815a7f26ea36cb2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1793079954}
+    - target: {fileID: 8427254134360094057, guid: 00afbd4a53d7afb47815a7f26ea36cb2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DummySaveGame
       objectReference: {fileID: 0}
     - target: {fileID: 9171233927280492048, guid: 00afbd4a53d7afb47815a7f26ea36cb2, type: 3}
       propertyPath: m_Name
@@ -10265,6 +10327,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1793079956}
   - {fileID: 112333429}
   - {fileID: 1170457574}
   - {fileID: 538972291}
