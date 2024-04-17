@@ -7,6 +7,7 @@ using TMPro;
 public class ShopDisplayFeed : MonoBehaviour
 {
     public SO_Purchaseable purchaseable;
+    public LoadsaMoney moneyManager;
 
     public Image art;
     public TMP_Text itemName;
@@ -17,6 +18,14 @@ public class ShopDisplayFeed : MonoBehaviour
     public GameObject hardCurrency;
     public GameObject realMoney;
 
+    public GameObject cantAffordPopup;
+    public GameObject purchaseSoftConfirm;
+    public GameObject purchaseHardConfirm;
+    public GameObject purchaseRealConfirm;
+
+    private int moneyAmount;
+    public int hardAmount;
+
     private void Awake()
     {
         SelectObject(purchaseable);
@@ -24,6 +33,9 @@ public class ShopDisplayFeed : MonoBehaviour
 
     public void SelectObject(SO_Purchaseable data)
     {
+        purchaseable = data;
+        hardAmount = data.HardCurrencyAmount;
+        moneyAmount = data.price;
         art.sprite = data.sprite;
         itemName.SetText(data.itemName);
         itemDescription.SetText(data.itemDescription);
@@ -49,5 +61,55 @@ public class ShopDisplayFeed : MonoBehaviour
             realMoney.SetActive(false);
             hardCurrency.SetActive(false);
         }
+    }
+
+    public void PurchaseSelected()
+    {
+        if (purchaseable.SoftCurrency)
+        {
+            if (moneyManager.hellaSoft < purchaseable.price)
+            {
+                cantAffordPopup.SetActive(true);
+            }
+            else
+            {
+                purchaseSoftConfirm.SetActive(true);
+            }
+        }
+
+        if (purchaseable.HardCurrency)
+        {
+            if (moneyManager.hellaHard < purchaseable.price)
+            {
+                cantAffordPopup.SetActive(true);
+            }
+            else
+            {
+                purchaseHardConfirm.SetActive(true);
+            }
+        }
+
+        if (purchaseable.Money)
+        {
+            purchaseRealConfirm.SetActive(true);
+        }
+    }
+
+    public void ConfirmSoft()
+    {
+        moneyManager.RemoveCalamityCoins(purchaseable.price);
+        purchaseSoftConfirm.SetActive(false);
+    }
+
+    public void ConfirmHard()
+    {
+        moneyManager.RemoveTowerTalents(hardAmount);
+        purchaseHardConfirm.SetActive(false);
+    }
+
+    public void ConfirmReal()
+    {
+        moneyManager.AddTowerTalents(hardAmount);
+        purchaseRealConfirm.SetActive(false);
     }
 }

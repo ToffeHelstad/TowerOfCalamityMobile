@@ -19,4 +19,12 @@ public class MenuSaveDummyScript : MonoBehaviour
         }
     }
 
+    public void DummySaveGame()
+    {
+        if (GameSaved == false)
+            GameSaved = true;
+        else
+            GameSaved = false;
+    }
+
 }
