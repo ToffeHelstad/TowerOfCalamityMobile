@@ -7109,7 +7109,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1733008006}
         m_TargetAssemblyTypeName: SceneIndexManager, Assembly-CSharp
         m_MethodName: ChangeToGameScene
         m_Mode: 1
@@ -10166,6 +10166,10 @@ PrefabInstance:
     - target: {fileID: 2616809973134841641, guid: 00afbd4a53d7afb47815a7f26ea36cb2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826245574463801606, guid: 00afbd4a53d7afb47815a7f26ea36cb2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7710922776588780249, guid: 00afbd4a53d7afb47815a7f26ea36cb2, type: 3}
       propertyPath: GameSceneName
