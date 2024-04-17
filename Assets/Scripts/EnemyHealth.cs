@@ -15,7 +15,6 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        deathSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,9 +38,10 @@ public class EnemyHealth : MonoBehaviour
 
     void Dead()
     {
-        loadmoni.hellaSoft += moneyGain; //legger til 1 basert på hva som skjer i if statement
+        loadmoni.AddSoftCurrencyEnemyDeath(moneyGain);
         PlayerPrefs.SetInt("amount", loadmoni.hellaSoft); //lagrer mengden i hellaCash som int i PlayerPref
         deathSound.Play();
+        Handheld.Vibrate();
         Destroy(gameObject);
     }
 }
