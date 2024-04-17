@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject weapon2;
 
     public int activeWeapon;
+    public int retries;
+    public int remainingRetries;
 
     //[SerializeField] private InputActionReference moveInput;
     public FloatingJoystick joystick;
@@ -25,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         activeWeapon = 1;
+        retries = PlayerPrefs.GetInt("amount");
+        remainingRetries = retries;
     }
 
     // Update is called once per frame
