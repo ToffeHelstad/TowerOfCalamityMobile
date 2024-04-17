@@ -41,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
         loadmoni.AddSoftCurrencyEnemyDeath(moneyGain);
         PlayerPrefs.SetInt("amount", loadmoni.hellaSoft); //lagrer mengden i hellaCash som int i PlayerPref
         deathSound.Play();
+        Handheld.Vibrate();
         Destroy(gameObject);
     }
 }

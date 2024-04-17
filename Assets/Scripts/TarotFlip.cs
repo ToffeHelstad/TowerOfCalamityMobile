@@ -16,6 +16,7 @@ public class TarotFlip : MonoBehaviour
         if(accelerationDir.sqrMagnitude > 5f ) 
         {
             card.SetActive( false );
+            Handheld.Vibrate();
         }
     }
 }
