@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VetlesTestScener/ButtonTest.unity
     guid: 29c6ebdd0c0a84749ac18e4a8a496eb7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/VetlesTestScener/Gameplay.unity
     guid: bb90c87ae3ca6b0428c6d7a5fecf61b0
   - enabled: 1
