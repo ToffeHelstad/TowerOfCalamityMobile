@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float currentHealth;
-    [SerializeField] private float maxHealth;
+    [SerializeField] private float currentPlayerHealth;
+    [SerializeField] private float maxPlayerHealth;
 
     [SerializeField] private AudioSource deathSound;
+
+    public GameObject gameOverScreen;
     void Start()
     {
-        currentHealth = maxHealth;
+        maxPlayerHealth = 3;
+        currentPlayerHealth = maxPlayerHealth;
     }
 
     // Update is called once per frame
@@ -21,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
             LoseHealth();
         }
 
-        if (currentHealth <= 0)
+        if (currentPlayerHealth <= 0)
         {
             Dead();
         }
@@ -29,13 +32,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void LoseHealth()
     {
-        currentHealth -= 1;
+        currentPlayerHealth -= 1;
     }
 
     void Dead()
     {
         deathSound.Play();
         Handheld.Vibrate();
+        gameOverScreen.SetActive(true);
         Destroy(gameObject);
     }
 }
