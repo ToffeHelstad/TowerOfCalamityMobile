@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37441114e8a70454b8df471644bb6859, type: 3}
+  m_Name: Skin 3
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 3441879777456424529, guid: 5886df7f54b6d0f42993aa1f3ba350b4, type: 3}
+  itemName: Ranger
+  itemDescription: She walks the forest with her bow to find anyone in need of help.
+    The tower called to her.
+  price: 1400
+  SoftCurrency: 1
+  HardCurrency: 0
+  Money: 0
+  Object: 1
+  Currency: 0
+  HardCurrencyAmount: 0
