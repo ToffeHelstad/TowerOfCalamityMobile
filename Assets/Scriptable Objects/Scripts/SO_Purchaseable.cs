@@ -23,4 +23,7 @@ public class SO_Purchaseable : ScriptableObject
 
     [Header("How much currency does it give you?")]
     public int HardCurrencyAmount;
+
+    public bool UnlockChar1;
+    public bool UnlockChar2;
 }

@@ -8,6 +8,7 @@ public class ShopDisplayFeed : MonoBehaviour
 {
     public SO_Purchaseable purchaseable;
     public LoadsaMoney moneyManager;
+    public FakeUnlockScript unlockScript;
 
     public Image art;
     public TMP_Text itemName;
@@ -97,6 +98,15 @@ public class ShopDisplayFeed : MonoBehaviour
 
     public void ConfirmSoft()
     {
+        if (purchaseable.UnlockChar1)
+        {
+            unlockScript.UnlockCharacter1();
+        }
+
+        if (purchaseable.UnlockChar2)
+        {
+            unlockScript.UnlockCharacter2();
+        }
         moneyManager.RemoveCalamityCoins(purchaseable.price);
         purchaseSoftConfirm.SetActive(false);
     }

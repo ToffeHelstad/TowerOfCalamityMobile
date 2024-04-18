@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37441114e8a70454b8df471644bb6859, type: 3}
   m_Name: Skin 1
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  itemName: 
-  itemDescription: 
-  price: 0
-  SoftCurrency: 0
+  sprite: {fileID: 3595162400088356192, guid: 9fe924a20410d4149a5d1b0a4c36b720, type: 3}
+  itemName: Knight
+  itemDescription: A glorious knight to fight the night. Into Rhymes? So are we.
+  price: 1400
+  SoftCurrency: 1
   HardCurrency: 0
   Money: 0
-  Object: 0
+  Object: 1
   Currency: 0
   HardCurrencyAmount: 0
+  UnlockChar1: 1
+  UnlockChar2: 0
