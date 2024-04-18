@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField ]private float currentHealth;
-    [SerializeField] private float maxHealth;
+    [SerializeField ]private float currentEnemyHealth;
+    [SerializeField] private float maxEnemyHealth;
 
     [SerializeField] private int moneyGain;
 
@@ -14,7 +14,8 @@ public class EnemyHealth : MonoBehaviour
     public LoadsaMoney loadmoni;
     void Start()
     {
-        currentHealth = maxHealth;
+        maxEnemyHealth = 1;
+        currentEnemyHealth = maxEnemyHealth;
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
             LoseHealth();
         }
 
-        if(currentHealth <= 0)
+        if(currentEnemyHealth <= 0)
         {
             Dead();
         }
@@ -33,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void LoseHealth()
     {
-        currentHealth -= 1;
+        currentEnemyHealth -= 1;
     }
 
     void Dead()

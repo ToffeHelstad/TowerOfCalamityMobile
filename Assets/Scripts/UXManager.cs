@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class UXManager : MonoBehaviour
 {
-    public List<AudioClip> AudioClips;
+    public AudioClip buttonClickSound;
+    public AudioSource audioSource;
+    public float Volume = 0.7f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +18,11 @@ public class UXManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ButtonUXFire()
+    {
+        audioSource.PlayOneShot(buttonClickSound,Volume);
+        Handheld.Vibrate();
     }
 }

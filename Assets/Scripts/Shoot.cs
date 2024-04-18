@@ -46,10 +46,10 @@ public class Shoot : MonoBehaviour
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }*/
 
-        if (Input.GetMouseButton(0) && canFire)
-        {
-            canFire = false;
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
-        }
+        //if (Input.GetMouseButton(0) && canFire)
+        //{
+           // canFire = false;
+           // Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+        //}
     }
 }
